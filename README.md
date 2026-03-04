@@ -210,9 +210,9 @@ Backend сервер на Node.js + Express.js развёрнут на Vercel:
 **Влад Ильин** - Frontend Engineer
 
 - 🌐 **Портфолио**: [vladilyin.netlify.app](https://vladilyin.netlify.app/)
-- 💻 **GitHub**: [@vlad-script](https://github.com/vlad-script)
-- 📱 **Telegram**: [@vladscript](https://t.me/vladscript)
-- 📷 **Instagram**: [@vladscript](https://www.instagram.com/vladscript/)
+- 💻 **GitHub**: [@vladilyinoff](https://github.com/vladilyinoff)
+- 📱 **Telegram**: [@worldhacker](https://t.me/worldhacker)
+- 📷 **Instagram**: [@vladilyinoff](https://www.instagram.com/vladilyinoff/)
 - 📧 **Email**: vladjsx.it@gmail.com
 
 ---
