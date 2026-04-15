@@ -13,10 +13,8 @@ const effectsContainer = document.createElement('div');
 effectsContainer.id = 'effects-container';
 document.body.appendChild(effectsContainer);
 
-// Функция инициализации приложения
 async function initializeApp(): Promise<void> {
     try {
-        // Сразу рендерим снег и гирлянду, чтобы они были видны на preloader
         createRoot(effectsContainer).render(
             <StrictMode>
                 <Snow />
@@ -24,18 +22,14 @@ async function initializeApp(): Promise<void> {
             </StrictMode>
         );
 
-        // Ждем загрузки i18n
         await i18nInitPromise;
         
-        // Предзагружаем все ресурсы (шрифты и изображения)
         await preloadAllResources();
 
-        // Скрываем preloader с анимацией
         if (preloader) {
             preloader.classList.add('preloader');
         }
         
-        // Рендерим приложение
         const rootElement = document.getElementById('root');
         if (rootElement) {
             createRoot(rootElement).render(
@@ -45,12 +39,8 @@ async function initializeApp(): Promise<void> {
             );
         }
         
-        // Помечаем body как загруженный, чтобы показать контент
-        //document.body.classList.add('loaded');
-        
     } catch (error) {
         console.error('Ошибка при инициализации:', error);
-        // Все равно показываем приложение даже при ошибках
         const rootElement = document.getElementById('root');
         if (rootElement) {
             createRoot(rootElement).render(
@@ -66,11 +56,9 @@ async function initializeApp(): Promise<void> {
     }
 }
 
-// Начинаем инициализацию после загрузки DOM
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initializeApp);
 } else {
-    // DOM уже загружен
     initializeApp();
 }
 
